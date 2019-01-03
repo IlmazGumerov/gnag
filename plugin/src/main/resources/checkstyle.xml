@@ -52,6 +52,7 @@
 
     <module name="TreeWalker">
 
+        <!-- Pay attention to @SuppressWarnings annotations -->
         <module name="SuppressWarningsHolder" />
 
         <module name="FileContentsHolder" />
@@ -184,7 +185,7 @@
 
     </module>
 
-    <!-- Enable suppression annotations -->
+    <!-- Enable suppression via @SuppressWarnings annotations -->
     <module name="SuppressWarningsFilter" />
 
     <!-- Enable suppression comments -->
