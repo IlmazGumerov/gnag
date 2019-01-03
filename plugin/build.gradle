@@ -41,7 +41,7 @@ dependencies {
     compile 'com.vladsch.flexmark:flexmark-all:0.34.4'
 
     // Built in checks
-    compile 'com.puppycrawl.tools:checkstyle:7.8.2'
+    compile 'com.puppycrawl.tools:checkstyle:8.0'
     compile 'com.google.code.findbugs:findbugs:3.0.1'
     compile 'net.sourceforge.pmd:pmd-java:6.10.0'
 
