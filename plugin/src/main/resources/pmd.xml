@@ -87,14 +87,6 @@
 
     <rule ref="rulesets/java/junit.xml" />
 
-    <rule ref="rulesets/java/logging-jakarta-commons.xml">
-        <exclude name="GuardLogStatement" />
-    </rule>
-
-    <rule ref="rulesets/java/logging-java.xml">
-        <exclude name="GuardLogStatementJavaUtil" />
-    </rule>
-
     <rule ref="rulesets/java/migrating.xml" />
 
     <rule ref="rulesets/java/naming.xml">
@@ -122,5 +114,16 @@
     <rule ref="rulesets/java/unnecessary.xml" />
 
     <rule ref="rulesets/java/unusedcode.xml" />
+
+    <!-- Replacements for customized logging-jakarta-commons and logging-java rulesets -->
+    <!-- See https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/rulesets/java/logging-java.xml -->
+    <!-- See https://github.com/pmd/pmd/blob/master/pmd-java/src/main/resources/rulesets/java/logging-jakarta-commons.xml -->
+    <rule ref="category/java/errorprone.xml/InvalidSlf4jMessageFormat" />
+    <rule ref="category/java/errorprone.xml/LoggerIsNotStaticFinal" />
+    <rule ref="category/java/errorprone.xml/MoreThanOneLogger" />
+    <rule ref="category/java/errorprone.xml/ProperLogger" />
+    <rule ref="category/java/errorprone.xml/UseCorrectExceptionLogging" />
+    <rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace" />
+    <rule ref="category/java/bestpractices.xml/SystemPrintln" />
 
 </ruleset>
