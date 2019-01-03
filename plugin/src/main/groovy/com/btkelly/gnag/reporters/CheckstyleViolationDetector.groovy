@@ -42,9 +42,9 @@ class CheckstyleViolationDetector extends BaseExecutedViolationDetector {
         checkStyleTask.addFormatter(new CheckstyleAntTask.Formatter(type: new CheckstyleAntTask.FormatterType(value: 'xml'), tofile: reportFile()))
 
         if (reporterExtension.hasReporterConfig()) {
-            checkStyleTask.setConfig(reporterExtension.getReporterConfig().toString())
+            checkStyleTask.setConfig(reporterExtension.getReporterConfig())
         } else {
-            checkStyleTask.setConfig(getClass().getClassLoader().getResource("checkstyle.xml").toString())
+            checkStyleTask.setConfigUrl(getClass().getClassLoader().getResource("checkstyle.xml"))
         }
 
         projectHelper.getJavaSourceFiles().each { sourceFile ->
